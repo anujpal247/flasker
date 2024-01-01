@@ -1,0 +1,20 @@
+<form action="{{ url_for('contact') }}" method="post">
+    {{ form.csrf_token }}
+    <label for="{{ form.name.id }}">Name:</label>
+    {{ form.name(class='form-control') }}
+    {{ form.name.errors }}
+    <br><br>
+
+    <label for="{{ form.email.id }}">Email:</label>
+    {{ form.email(class='form-control') }}
+    {{ form.email.errors }}
+    <br><br>
+
+    <label for="{{ form.message.id }}">Message:</label>
+    {{ form.message(class='form-control') }}
+    {{ form.message.errors }}
+    <br><br>
+
+    <input type="submit" value="submit">
+
+</form>
